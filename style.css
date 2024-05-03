@@ -53,6 +53,26 @@ body{
   .skills,.skill{
     align-items: center;
   }
+  .row2 .certificate{
+    width:450px;
+    height:350px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+
+  .row2 .certificate{
+    width:430px;
+    height:350px;
+  }
+  .skills{
+    margin-left: 180px;
+  }
+  .row6 .Address1{
+    margin-left:10px;
+  }
+  .row6 .Address1 .add{
+    font-size: 22px;
+  }
 }
 
 
@@ -334,7 +354,10 @@ color: transparent;
   background-color: black;
   padding: 50px;
 }
-
+.certificate{
+  width: 600px;
+  height:400px;
+}
 
 
 .about{   

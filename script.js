@@ -4,13 +4,21 @@ window.onscroll=()=>{
 }
 
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 
 var typed = new Typed(".multiple-text", {
             strings: ["Web Developer","UI/UX Designer"],
             typeSpeed: 100,
             backSpeed: 100,
             backDelay: 1000,
-            loop: true,
+            loop: true,     
 })
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -40,6 +48,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+let sections= document.querySelectorAll('section');
+let navLinks= document.querySelectorAll('menu li a');
+window.onscroll =() => {
+    sections.forEach(sec => {
+        let top=window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('btn1 [href*=' + ']').classList.add('active');
+            })
+        }
+    })
+}
 
 
 /*const cursorDot = document.querySelector("[data-cursor-dot]");
